@@ -1,0 +1,69 @@
+/* Your styles should be mobile-first and responsive */
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  background-color: #FAD7A0;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.start-screen {
+  text-align: center;
+}
+
+/* Question and Score counter */
+.question-and-score {
+  text-align: center;
+  list-style: none;
+}
+
+/* Container with Question, Answers, Submit & Next Buttons */
+fieldset {
+  padding: 20px;
+  margin: auto;
+  width: 65%;
+}
+
+legend {
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Correct or Incorrect pop-ups */
+.correct {
+  color: green;
+  font-style: italic;
+  font-weight: bold;
+  float: left;
+  display: contents;
+}
+
+.incorrect {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+  float: left;
+  display: contents;
+}  
