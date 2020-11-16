@@ -142,7 +142,7 @@ function generateAnswers() {
   answersArray.forEach(answer => {
     answers += `
       <div id="option-container-${i}">
-        <input type="radio" name="options" id="option${i + 1}" value="${answer}" tabindex="${i + 1}" required>
+        <input type="radio" name="options" id="option${i + 1}" value="${answer}" required>
         <label for="option${i + 1}"> ${answer}</label>
       </div>  
     `;
@@ -165,8 +165,8 @@ function generateQuestion() {
             ${generateAnswers()}
           </div>
         </div>
-        <button type="submit" id="submit-button" tabindex="8">Submit</button>
-        <button type="button" id="next-question-button" tabindex="7">Next</button>
+        <button type="submit" id="submit-button">Submit</button>
+        <button class="hidden" type="button" id="next-question-button">Next</button>
       </fieldset>
     </form>         
   `;
@@ -204,6 +204,7 @@ function generatePopup(answerStatus) {
     `;
   }
   return string;
+  $('button').removeClass('hidden');
 }
 /********** RENDER FUNCTION(S) **********/
 
@@ -265,7 +266,7 @@ function handleSubmitClick() {
     }
     store.currentQuestion++;
     // hide the submit button
-    $('#submit-answer-btn').hide();
+    $('#submit-button').hide();
     // disable all inputs
     $('input[type=radio]').each(() => {
       $('input[type=radio]').attr('disabled', true);

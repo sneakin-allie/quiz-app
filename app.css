@@ -67,3 +67,8 @@ button {
   float: left;
   display: contents;
 }  
+
+/* To hide/reveal buttons */
+.hidden {
+  display: none;
+}
